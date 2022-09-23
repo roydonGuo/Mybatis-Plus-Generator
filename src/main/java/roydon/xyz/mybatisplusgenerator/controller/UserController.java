@@ -43,6 +43,7 @@ public class UserController {
 
     @GetMapping
     public List<User> findAll() {
+
         return userService.list();
     }
 
@@ -57,5 +58,6 @@ public class UserController {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         return userService.page(new Page<>(pageNum, pageSize), queryWrapper);
     }
+
 }
 
